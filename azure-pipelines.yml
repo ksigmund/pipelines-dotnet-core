@@ -20,4 +20,4 @@ steps:
   inputs:
     BuildDropPath: '$(Build.SourcesDirectory)'
     Verbosity: Verbose
-    AdditionalComponentDetectorArgs: "-P 2 -P 3"
+    AdditionalComponentDetectorArgs: "--IgnoreDirectories abc;123"
