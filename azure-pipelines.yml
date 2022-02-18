@@ -16,7 +16,7 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
   
-- task: ManifestGeneratorTask@0
+- task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
   inputs:
     BuildDropPath: '$(Build.SourcesDirectory)'
     Verbosity: Verbose
