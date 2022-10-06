@@ -16,8 +16,9 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
   
-- task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
+- task: ManifestGeneratorTaskTest@0
   inputs:
     BuildDropPath: '$(Build.SourcesDirectory)'
-    Verbosity: Verbose
-    AdditionalComponentDetectorArgs: "--IgnoreDirectories abc;123"
+    Verbosity: 'Verbose'
+    AdditionalComponentDetectorArgs: '--IgnoreDirectories abc;123'
+
